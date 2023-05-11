@@ -2,7 +2,10 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 # Description
 This application demonstrates the development of fetch routes via GET and POST methods (with further development opportunity for a DELETE method) to establish effective communication between server-side data and the application's front end. The result is essentially a digital, web-hosted notebook app which retains data on the server for future accesss on any browser.
+# Links
+[GitHub Repo](https://github.com/klozano17)
 
+[Heroku link](https://lozano-note-taker.herokuapp.com/)
 ## Table of Contents
 1. [Installation](#installation)
 2. [Usage](#usage)

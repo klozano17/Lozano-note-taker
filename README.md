@@ -12,7 +12,8 @@ This application demonstrates the development of fetch routes via GET and POST m
 # Installation
 Clone the repo into your vs code, install express.js if needed by typing in "npm install express" in the terminal in your vs code. Then to run the application, type "npm start" into the terminal and click on your localhost:port to open the app in your browser.
 # Usage
-
+Here is a screenshot of the app:
+![Demo of Note Taker app](./public/assets/images/notesSC.PNG)
 # License
 The MIT License
 # Contributors

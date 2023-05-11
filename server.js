@@ -108,7 +108,7 @@ function deleteNote(id, parsedData) {
 return parsedData;
 }
 
-const readAndDelete = (id, file, callback) => {
+function readAndDelete(id, file, callback) {
     fs.readFile(file, 'utf8', (err, data) => {
         if (err) {
             console.error(err);
@@ -119,13 +119,26 @@ const readAndDelete = (id, file, callback) => {
             callback();
         }
     });
-};
+}
 
 app.delete('/api/notes/:id', (req, res) => {
     readAndDelete(req.params.id, './db/db.json', () => {
         res.json(true);
     });
 });
+
+fetch('/api/notes')
+  .then(response => response.json())
+  .then(notes => {
+    // Display the first note in the right-hand column
+    const noteDetails = document.getElementById('note-details');
+    noteDetails.innerHTML = `
+      <h2>${notes[0].title}</h2>
+      <p>${notes[0].text}</p>
+      <p>ID: ${notes[0].id}</p>
+    `;
+  })
+  .catch(error => console.error(error));
 
 
 

@@ -127,19 +127,6 @@ app.delete('/api/notes/:id', (req, res) => {
     });
 });
 
-fetch('/api/notes')
-  .then(response => response.json())
-  .then(notes => {
-    // Display the first note in the right-hand column
-    const noteDetails = document.getElementById('note-details');
-    noteDetails.innerHTML = `
-      <h2>${notes[0].title}</h2>
-      <p>${notes[0].text}</p>
-      <p>ID: ${notes[0].id}</p>
-    `;
-  })
-  .catch(error => console.error(error));
-
 
 
 app.listen(PORT, () => {
